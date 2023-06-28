@@ -1,0 +1,20 @@
+.carousel-video {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.react-player {
+  display: flex;
+  justify-content: center;
+}
+
+.react-multiple-carousel__arrow--left {
+  left: calc(20% + 1px);
+  height: 50px;
+  width: 50px;
+}
+.react-multiple-carousel__arrow--right {
+  right: calc(20% + 1px);
+  height: 50px;
+  width: 50px;
+}
