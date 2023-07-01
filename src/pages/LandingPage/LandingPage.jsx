@@ -8,6 +8,7 @@ import Footer from "../../sections/Footer/Footer";
 import Login from "../../components/Login/Login";
 import Signup from "../../components/Singup/Singup";
 import ContactUs from "../../sections/ContactUs/ContactUs";
+import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton";
 
 const LandingPage = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -31,6 +32,7 @@ const LandingPage = () => {
 
   return (
     <div>
+      <ScrollToTopButton />
       <Nav
         handleLoginClick={handleLoginClick}
         handleSignupClick={handleSignupClick}
