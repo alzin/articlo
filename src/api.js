@@ -1,4 +1,4 @@
-const API_URL = "https://articloapi-production.up.railway.app:5000";
+const API_URL = "https://articloapi-production.up.railway.app";
 
 export const fetchAsk = async (question) => {
   try {
