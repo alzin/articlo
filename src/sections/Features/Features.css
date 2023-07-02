@@ -2,7 +2,7 @@
   padding: 3rem;
   text-align: center;
   background-color: #f8f8f8;
-  height: 700px; 
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,11 +18,12 @@
 }
 
 .features-grid {
-  display:table-column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .feature {
-  margin-bottom: 20px; 
   background-color: #fff;
   padding: 2rem;
   border-radius: 8px;
@@ -50,4 +51,19 @@
 .feature-description {
   font-size: 1.2rem;
   color: #555;
+}
+
+@media (max-width: 768px) {
+  .features-container {
+    padding: 2rem;
+    min-height: auto;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature {
+    margin-bottom: 2rem;
+  }
 }
