@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { Button } from 'reactstrap';
+import { Button } from "reactstrap";
 
 import "./Nav.css";
 
@@ -36,27 +36,41 @@ const Nav = ({ handleLoginClick, handleSignupClick }) => {
           <span></span>
           <span></span>
         </label>
-        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <li>
-            <Link onClick={() => scrollTo("features-section")}>Features</Link>
-          </li>
-          <li>
-            <Link onClick={() => scrollTo("pricing-section")}>Pricing</Link>
-          </li>
-          <li>
-            <Link onClick={() => scrollTo("contact-section")}>Contact Us</Link>
-          </li>
-          <li>
-            <Button color="secondary" size="sm" outline onClick={handleLoginClick}>
-              Login
-            </Button>
-          </li>
-          <li>
-            <Button color="success" outline onClick={handleSignupClick}>
-              Sign Up
-            </Button>
-          </li>
-        </ul>
+        <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <Button
+            className="remove-radius"
+            color="dark"
+            size="lg"
+            outline
+            onClick={() => scrollTo("features-section")}
+          >
+            Features
+          </Button>
+          <Button
+            className="remove-radius"
+            color="dark"
+            size="lg"
+            outline
+            onClick={() => scrollTo("pricing-section")}
+          >
+            Pricing
+          </Button>
+          <Button
+            className="remove-radius"
+            color="dark"
+            size="lg"
+            outline
+            onClick={() => scrollTo("contact-section")}
+          >
+            Contact Us
+          </Button>
+          <Button size="lg" color="secondary" onClick={handleLoginClick}>
+            Login
+          </Button>
+          <Button size="lg" color="success" onClick={handleSignupClick}>
+            Sign Up
+          </Button>
+        </div>
       </nav>
     </section>
   );
