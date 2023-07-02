@@ -1,6 +1,8 @@
 import React from "react";
 import "./Hero.css";
 
+import { Button } from 'reactstrap';
+
 const Hero = ({ handleSignupClick }) => {
   return (
     <div className="hero-container">
@@ -8,9 +10,9 @@ const Hero = ({ handleSignupClick }) => {
       <p className="hero-description">
         Write, Generate, and Share Blogs with Ease
       </p>
-      <button className="hero-button" onClick={handleSignupClick}>
-        Get Started
-      </button>
+      <Button color="danger" size="lg" onClick={handleSignupClick}>
+        Try Now For Free
+      </Button>
     </div>
   );
 };

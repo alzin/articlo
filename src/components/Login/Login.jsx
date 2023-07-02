@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import Modal from "react-modal";
 
+import { Button } from 'reactstrap';
+
 import "./Login.css";
 
 const Login = ({ handleCloseLogin }) => {
@@ -62,9 +64,9 @@ const Login = ({ handleCloseLogin }) => {
             onChange={handleChange}
           />
         </div>
-        <button type="submit" className="submit-button">
+        <Button type="submit" color="success" outline>
           Login
-        </button>
+        </Button>
       </form>
     </Modal>
   );

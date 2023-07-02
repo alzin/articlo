@@ -26,20 +26,3 @@
     color: whitesmoke;
     margin-bottom: 2rem;
   }
-  
-  .hero-button {
-    background-color: #33CC33;
-    color: #fff;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 4px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .hero-button:hover {
-    background-color: #2e8b57;
-  }
-  

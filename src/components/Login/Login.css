@@ -38,25 +38,11 @@
 }
 
 .login-form input[type="email"],
-.login-form input[type="password"] {
+.login-form input[type="password"],
+.login-form button[type="submit"] {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 3px;
   box-sizing: border-box;
-}
-
-.login-form .submit-button {
-  width: auto;
-  padding: 10px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  margin-top: 15px;
-}
-
-.login-form .submit-button:hover {
-  background-color: #45a049;
 }

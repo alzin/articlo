@@ -39,7 +39,8 @@
 
 .signup-form input[type="text"],
 .signup-form input[type="email"],
-.signup-form input[type="password"] {
+.signup-form input[type="password"],
+.signup-form button[type="submit"] {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
@@ -47,19 +48,3 @@
   box-sizing: border-box;
 }
 
-.signup-form .submit-button {
-  width: auto;
-  margin-top: 15px;
-  padding: 10px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.signup-form .submit-button:hover {
-  background-color: #45a049;
-}
-
-/* Optional: Add more styles as needed */
