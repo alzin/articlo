@@ -1,8 +1,8 @@
-const API_URL = "https://articloapi-production.up.railway.app";
+const API_URL = process.env.REACT_APP_ARTICLO_SERVER_URL;
 
 export const fetchAsk = async (question) => {
   try {
-    const response = await fetch(`${API_URL}/ask`, {
+    const response = await fetch(`${API_URL}ask`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt: question }),
@@ -17,7 +17,7 @@ export const fetchAsk = async (question) => {
 
 export const fetchEdit = async (edit) => {
   try {
-    const response = await fetch(`${API_URL}/edit`, {
+    const response = await fetch(`${API_URL}edit`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt: edit }),

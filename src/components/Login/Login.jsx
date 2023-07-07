@@ -6,6 +6,8 @@ import { Button } from 'reactstrap';
 
 import "./Login.css";
 
+const SERVER_URL = process.env.REACT_APP_ARTICLO_SERVER_URL;
+
 const Login = ({ handleCloseLogin }) => {
   const [formData, setFormData] = useState({
     email: "",
@@ -21,7 +23,7 @@ const Login = ({ handleCloseLogin }) => {
 
     try {
       const response = await axios.post(
-        "https://articloapi-production.up.railway.app/api/login",
+        `${SERVER_URL}api/login`,
         formData
       );
       const { token } = response.data;

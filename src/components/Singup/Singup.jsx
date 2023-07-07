@@ -6,6 +6,8 @@ import { Button } from 'reactstrap';
 
 import "./Signup.css";
 
+const SERVER_URL = process.env.REACT_APP_ARTICLO_SERVER_URL;
+
 const Signup = ({ handleCloseSingup }) => {
   const [formData, setFormData] = useState({
     username: "",
@@ -22,7 +24,7 @@ const Signup = ({ handleCloseSingup }) => {
 
     try {
       const response = await axios.post(
-        "https://articloapi-production.up.railway.app/api/register",
+        `${SERVER_URL}api/register`,
         formData
       );
       console.log(response.data);
