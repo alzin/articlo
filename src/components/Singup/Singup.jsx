@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Modal from "react-modal";
 
-import { Button } from 'reactstrap';
+import { Button } from "reactstrap";
 
 import "./Signup.css";
 
@@ -23,10 +23,7 @@ const Signup = ({ handleCloseSingup }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        `${SERVER_URL}api/register`,
-        formData
-      );
+      const response = await axios.post(`${SERVER_URL}api/signup`, formData);
       console.log(response.data);
       const { token } = response.data;
       localStorage.setItem("token", token);
