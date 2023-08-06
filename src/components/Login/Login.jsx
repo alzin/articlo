@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Modal from "react-modal";
 
-import { Button } from 'reactstrap';
+import { Button } from "reactstrap";
 
 import "./Login.css";
 
@@ -22,13 +22,10 @@ const Login = ({ handleCloseLogin }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        `${SERVER_URL}api/login`,
-        formData
-      );
+      const response = await axios.post(`${SERVER_URL}/api/login`, formData);
       const { token } = response.data;
       localStorage.setItem("token", token);
-      window.location.href = "/ask";
+      window.location.href = "/home";
     } catch (error) {
       const errorMessage = error.response.data.message;
       alert(errorMessage);

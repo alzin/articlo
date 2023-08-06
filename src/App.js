@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/articles" element={<UserDashboard />} />
-        <Route path="/ask" element={<MainContainer />} />
+        <Route path="/home" element={<MainContainer />} />
       </Routes>
     </Router>
   );

@@ -2,7 +2,7 @@ const API_URL = process.env.REACT_APP_ARTICLO_SERVER_URL;
 
 export const fetchAsk = async (question) => {
   try {
-    const response = await fetch(`${API_URL}article`, {
+    const response = await fetch(`${API_URL}/api/article`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt: question }),

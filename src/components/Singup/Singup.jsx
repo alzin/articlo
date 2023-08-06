@@ -23,7 +23,7 @@ const Signup = ({ handleCloseSingup }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(`${SERVER_URL}api/signup`, formData);
+      const response = await axios.post(`${SERVER_URL}/api/signup`, formData);
       console.log(response.data);
       const { token } = response.data;
       localStorage.setItem("token", token);
