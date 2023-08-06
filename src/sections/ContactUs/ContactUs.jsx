@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 import "./ContactUs.css";
 
@@ -15,7 +15,7 @@ const ContactUs = () => {
         "service_0orlrkc",
         "template_fabncd4",
         form.current,
-        "mqYufy-Epq6lV-Wdk"
+        "mqYufy-Epq6lV-Wdk",
       )
       .then(
         (result) => {
@@ -25,7 +25,7 @@ const ContactUs = () => {
         (error) => {
           console.log(error.text);
           alert("An error occurred while sending the email.");
-        }
+        },
       );
     e.target.reset();
   };

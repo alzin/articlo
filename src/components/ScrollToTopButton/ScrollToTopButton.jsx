@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import './ScrollToTopButton.css'; // Import the CSS file for the component
+import "./ScrollToTopButton.css"; // Import the CSS file for the component
 
 class ScrollToTopButton extends React.Component {
   constructor(props) {
@@ -9,11 +9,11 @@ class ScrollToTopButton extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener("scroll", this.handleScroll);
   }
 
   handleScroll = () => {
@@ -28,7 +28,7 @@ class ScrollToTopButton extends React.Component {
   };
 
   scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   render() {
@@ -36,10 +36,15 @@ class ScrollToTopButton extends React.Component {
 
     return (
       <button
-        className={`scroll-to-top-button ${isVisible ? 'visible' : ''}`}
+        className={`scroll-to-top-button ${isVisible ? "visible" : ""}`}
         onClick={this.scrollToTop}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
           <path d="M12 5.293L18.293 11.586 17.586 12.293 12 6.707 6.414 12.293 5.707 11.586z" />
         </svg>
       </button>
