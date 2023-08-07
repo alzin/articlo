@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainContainer from "./pages/MainContainer/MainContainer.jsx";
 import LandingPage from "./pages/LandingPage/LandingPage.jsx";
 import UserDashboard from "./components/UserDashboard/UserDashboard.jsx";
+import PrivateRoute from "./PrivateRoute.js";
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/articles" element={<UserDashboard />} />
-        <Route path="/home" element={<MainContainer />} />
+        <Route exact path="/" element={<PrivateRoute />}>
+          <Route path="/home" element={<MainContainer />} />
+        </Route>
       </Routes>
     </Router>
   );
