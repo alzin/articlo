@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./QuestionInput.css";
 
-import { SiTurbosquid } from "react-icons/si";
+import { IoMdCreate } from "react-icons/io";
 
 const QuestionInput = (props) => {
   const [questionValue, setQuestionValue] = useState("");
@@ -12,6 +12,7 @@ const QuestionInput = (props) => {
   };
 
   const handleClick = () => {
+    if (!questionValue) return;
     props.onSubmit(questionValue);
     setQuestionValue("");
   };
@@ -32,7 +33,7 @@ const QuestionInput = (props) => {
         onKeyDown={handleKeyDown}
       />
       <button type="submit" onClick={handleClick}>
-        <SiTurbosquid size={24} />
+        <IoMdCreate size={30} />
       </button>
     </div>
   );
