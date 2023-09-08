@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
 import { Button } from "reactstrap";
-
 import "./Nav.css";
 
 const Nav = ({ handleLoginClick, handleSignupClick }) => {
@@ -37,39 +35,43 @@ const Nav = ({ handleLoginClick, handleSignupClick }) => {
           <span></span>
         </label>
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <Button
-            className="remove-radius"
-            color="dark"
-            size="lg"
-            outline
-            onClick={() => scrollTo("features-section")}
-          >
-            Features
-          </Button>
-          <Button
-            className="remove-radius"
-            color="dark"
-            size="lg"
-            outline
-            onClick={() => scrollTo("pricing-section")}
-          >
-            Pricing
-          </Button>
-          <Button
-            className="remove-radius"
-            color="dark"
-            size="lg"
-            outline
-            onClick={() => scrollTo("contact-section")}
-          >
-            Contact Us
-          </Button>
-          <Button size="lg" color="secondary" onClick={handleLoginClick}>
-            Login
-          </Button>
-          <Button size="lg" color="success" onClick={handleSignupClick}>
-            Sign Up
-          </Button>
+          <div className="centered-buttons">
+            <Button
+              className="remove-radius"
+              color="dark"
+              size="lg"
+              outline
+              onClick={() => scrollTo("features-section")}
+            >
+              Features
+            </Button>
+            <Button
+              className="remove-radius"
+              color="dark"
+              size="lg"
+              outline
+              onClick={() => scrollTo("pricing-section")}
+            >
+              Pricing
+            </Button>
+            <Button
+              className="remove-radius"
+              color="dark"
+              size="lg"
+              outline
+              onClick={() => scrollTo("contact-section")}
+            >
+              Contact Us
+            </Button>
+          </div>
+          <div className="right-buttons">
+            <Button size="lg" color="secondary" onClick={handleLoginClick}>
+              Login
+            </Button>
+            <Button size="lg" color="success" onClick={handleSignupClick}>
+              Sign Up
+            </Button>
+          </div>
         </div>
       </nav>
     </section>

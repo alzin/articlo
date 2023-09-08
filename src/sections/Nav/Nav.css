@@ -35,10 +35,27 @@
 .nav-links {
   display: flex;
   gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .remove-radius {
   border-radius: 0 !important;
+}
+
+.centered-buttons {
+  margin-left: 5rem;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.right-buttons {
+  display: flex;
+  gap: 0.5rem;
 }
 
 @media (max-width: 1000px) {
@@ -70,7 +87,8 @@
     background-color: #555;
   }
 
-  .auth-buttons {
-    display: none;
+  .right-buttons {
+    display: flex;
+    justify-content: flex-end;
   }
 }
