@@ -19,7 +19,7 @@ const Pricing = () => {
               <li>Limited monthly usage quota for content generation.</li>
               <li>Basic customer support.</li>
             </ul>
-            <Button color="primary" size="lg" outline>
+            <Button color="warning" size="lg" outline>
               Try Now for Free
             </Button>
           </div>
@@ -34,7 +34,7 @@ const Pricing = () => {
               <li>Priority customer support for faster assistance.</li>
               <li>Access to premium templates and design options.</li>
             </ul>
-            <Button color="primary" size="lg" outline>
+            <Button color="warning" size="lg" outline>
               Try Now for Free
             </Button>
           </div>
@@ -48,7 +48,7 @@ const Pricing = () => {
               <li>Unlimited monthly usage quota for content generation.</li>
               <li>Early access to new features and updates.</li>
             </ul>
-            <Button color="primary" size="lg" outline>
+            <Button color="warning" size="lg" outline>
               Try Now for Free
             </Button>
           </div>

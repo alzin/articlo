@@ -1,8 +1,8 @@
 .features-container {
   padding: 3rem;
   text-align: center;
+  height: auto;
   background-color: #f8f8f8;
-  min-height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

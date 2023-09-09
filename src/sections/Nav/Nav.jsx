@@ -20,7 +20,7 @@ const Nav = ({ handleLoginClick, handleSignupClick }) => {
     <section id="home-section">
       <nav className="nav-container">
         <div className="logo">
-          <Link to="/">Articlo</Link>
+          <Link to="/">Artículo</Link>
         </div>
         <input
           type="checkbox"
@@ -40,7 +40,6 @@ const Nav = ({ handleLoginClick, handleSignupClick }) => {
               className="remove-radius"
               color="dark"
               size="lg"
-              outline
               onClick={() => scrollTo("features-section")}
             >
               Features
@@ -49,7 +48,6 @@ const Nav = ({ handleLoginClick, handleSignupClick }) => {
               className="remove-radius"
               color="dark"
               size="lg"
-              outline
               onClick={() => scrollTo("pricing-section")}
             >
               Pricing
@@ -58,7 +56,6 @@ const Nav = ({ handleLoginClick, handleSignupClick }) => {
               className="remove-radius"
               color="dark"
               size="lg"
-              outline
               onClick={() => scrollTo("contact-section")}
             >
               Contact Us
@@ -68,7 +65,12 @@ const Nav = ({ handleLoginClick, handleSignupClick }) => {
             <Button size="lg" color="secondary" onClick={handleLoginClick}>
               Login
             </Button>
-            <Button size="lg" color="success" onClick={handleSignupClick}>
+            <Button
+              size="lg"
+              color="success"
+              outline
+              onClick={handleSignupClick}
+            >
               Sign Up
             </Button>
           </div>
