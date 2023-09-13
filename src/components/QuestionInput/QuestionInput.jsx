@@ -28,7 +28,7 @@ const QuestionInput = (props) => {
       <input
         type="text"
         value={questionValue}
-        placeholder="Enter an article name for any topic..."
+        placeholder="Send an Article name"
         onChange={handleChange}
         onKeyDown={handleKeyDown}
       />
