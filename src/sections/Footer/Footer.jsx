@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="footer-links">
           <ul className="footer-nav">
             <li>
-              <Link onClick={() => scrollTo("home-section")}>Home</Link>
+              <Link onClick={() => scrollTo("home")}>Home</Link>
             </li>
             <li>
               <Link onClick={() => scrollTo("features-section")}>Features</Link>
@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="footer-text">
-        © {new Date().getFullYear()} Articlo. All rights reserved.
+        © {new Date().getFullYear()} Artículo. All rights reserved.
       </p>
     </footer>
   );

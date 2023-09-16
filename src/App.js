@@ -2,10 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import MainContainer from "./pages/MainContainer/MainContainer.jsx";
-// import LandingPage from "./pages/LandingPage/LandingPage.jsx";
+import LandingPage from "./pages/LandingPage/LandingPage.jsx";
 import UserDashboard from "./components/UserDashboard/UserDashboard.jsx";
 import PrivateRoute from "./PrivateRoute.js";
-import LandingPage from "./components/Landing Page/LandingPage.jsx";
 
 function App() {
   return (

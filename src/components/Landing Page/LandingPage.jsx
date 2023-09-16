@@ -1,5 +1,5 @@
-import React from 'react';
-import './LandingPage.css'; 
+import React from "react";
+import "./LandingPage.css";
 
 function LandingPage() {
   return (
@@ -7,7 +7,9 @@ function LandingPage() {
       <h1 className="landing-page-title">Artículo</h1>
       <div className="landing-page-content">
         <div className="landing-page-text">
-          <p className="landing-page-examples">Get articles & blogs on any topic</p>
+          <p className="landing-page-examples">
+            Get articles & blogs on any topic
+          </p>
           <ul className="landing-page-examples-list">
             <li>Technology</li>
             <li>Science</li>

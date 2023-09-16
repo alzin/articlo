@@ -1,30 +1,30 @@
 import React, { useState } from "react";
 
-import Nav from "../../sections/Nav/Nav";
-import Hero from "../../sections/Hero/Hero";
 import Features from "../../sections/Features/Features";
-import Pricing from "../../sections/Pricing/Pricing";
 import Footer from "../../sections/Footer/Footer";
 import Login from "../../components/Login/Login";
 import Signup from "../../components/Singup/Singup";
-import ContactUs from "../../sections/ContactUs/ContactUs";
 import ScrollToTopButton from "../../components/ScrollToTopButton/ScrollToTopButton";
+import Navbar from "../../sections/Navbar/Navbar";
+import HeroSection from "../../sections/HeroSection/HeroSection";
+import ContactSection from "../../sections/ContactSection/ContactSection";
+import PricingSection from "../../sections/PricingSection/PricingSection ";
 
 const LandingPage = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [showSignup, setShowSignup] = useState(false);
 
-  const handleLoginClick = () => {
-    setShowLogin(true);
-  };
+  // const handleLoginClick = () => {
+  //   setShowLogin(true);
+  // };
 
   const handleCloseLogin = () => {
     setShowLogin(false);
   };
 
-  const handleSignupClick = () => {
-    setShowSignup(true);
-  };
+  // const handleSignupClick = () => {
+  //   setShowSignup(true);
+  // };
 
   const handleCloseSignup = () => {
     setShowSignup(false);
@@ -33,14 +33,11 @@ const LandingPage = () => {
   return (
     <div>
       <ScrollToTopButton />
-      <Nav
-        handleLoginClick={handleLoginClick}
-        handleSignupClick={handleSignupClick}
-      />
-      <Hero handleSignupClick={handleSignupClick} />
+      <Navbar />
+      <HeroSection />
       <Features />
-      <Pricing />
-      <ContactUs />
+      <PricingSection />
+      <ContactSection />
       <Footer />
       {showSignup && <Signup handleCloseSingup={handleCloseSignup} />}
       {showLogin && <Login handleCloseLogin={handleCloseLogin} />}
