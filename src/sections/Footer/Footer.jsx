@@ -13,11 +13,13 @@ const Footer = () => {
     <footer className="footer-container">
       <div className="footer-content">
         <div className="footer-logo">
-          <img
+          {/* <img
             src="https://cdn.dribbble.com/userupload/3158902/file/original-7c71bfa677e61dea61bc2acd59158d32.jpg?resize=400x0"
             alt="Logo"
-          />
-          <h3 className="footer-title">Artículo</h3>
+          /> */}
+          <h3 className="footer-title" onClick={() => scrollTo("home")}>
+            Artículo
+          </h3>
         </div>
         <div className="footer-links">
           <ul className="footer-nav">

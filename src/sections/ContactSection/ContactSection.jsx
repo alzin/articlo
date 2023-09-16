@@ -41,7 +41,6 @@ const ContactSection = () => {
               <p>
                 <strong>Phone:</strong> +8190-9362-3261
               </p>
-              <p>Connect with us:</p>
               <div className="social-icons">
                 <a
                   href="https://www.facebook.com/mohamadghaith.alzin/"
