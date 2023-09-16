@@ -59,6 +59,7 @@ body {
   /* Show the menu toggle button */
   .menu-toggle {
     display: flex;
+    margin-right: 20px;
   }
 
   /* Hide the navigation menu */

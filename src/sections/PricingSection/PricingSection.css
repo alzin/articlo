@@ -5,8 +5,9 @@
 }
 
 .pricing-heading {
-  font-size: 36px;
   margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 .pricing-subheading {
@@ -16,7 +17,7 @@
 
 .pricing-cards {
   display: flex;
-  gap: 5rem;
+  gap: 1.5rem;
   justify-content: center;
 }
 

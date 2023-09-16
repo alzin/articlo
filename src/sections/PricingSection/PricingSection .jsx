@@ -5,7 +5,7 @@ const PricingSection = () => {
   return (
     <section id="pricing-section">
       <div className="pricing-container">
-        <h1 className="pricing-heading">Pricing Plans</h1>
+        <h1 className="pricing-heading">Pricing</h1>
         <p className="pricing-subheading">
           Choose the plan that fits your needs.
         </p>
