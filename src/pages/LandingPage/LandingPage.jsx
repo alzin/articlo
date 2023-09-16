@@ -33,7 +33,7 @@ const LandingPage = () => {
   return (
     <div>
       <ScrollToTopButton />
-      <Navbar />
+      <Navbar showNav={true} showLogout={false} />
       <HeroSection />
       <Features />
       <PricingSection />
