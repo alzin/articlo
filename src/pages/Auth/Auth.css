@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* takes full viewport height */
+  height: 100vh; 
 }
 
 .auth-container {
@@ -21,6 +21,7 @@
 }
 
 .auth-tab {
+  color: black;
   flex: 1;
   padding: 10px;
   text-align: center;
@@ -31,8 +32,8 @@
 }
 
 .auth-tab.active {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #df73e7;
+  color: white;
 }
 
 .auth-form input {
@@ -47,7 +48,7 @@
 .auth-form button {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #df73e7;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -57,7 +58,7 @@
 }
 
 .auth-form button:hover {
-  background-color: #0056b3;
+  background-color: #c851ce;
 }
 
 /* Media Query for smaller screens */

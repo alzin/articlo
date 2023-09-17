@@ -1,15 +1,16 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom"; 
 import "./HeroSection.css";
 
 import HeroImage from "../../images/1.png";
 
 const HeroSection = () => {
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate(); 
 
-  const handleButtonClick = () => {
-    navigate("/auth"); // Navigate to /auth when button is clicked
+  const handleButtonClick = (event) => {
+    navigate("/auth");
   };
+  
 
   return (
     <div className="hero-container">
@@ -22,10 +23,9 @@ const HeroSection = () => {
         alt="Illustration of service"
         className="hero-image"
       />
-      <button className="cta-button" onClick={handleButtonClick}>
+      <button className="cta-button" onClick={handleButtonClick} >
         Get Started
       </button>
-      {/* Add onClick handler to the button */}
     </div>
   );
 };
