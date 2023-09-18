@@ -6,9 +6,6 @@ const PricingSection = () => {
     <section id="pricing-section">
       <div className="pricing-container">
         <h1 className="pricing-heading">Pricing</h1>
-        <p className="pricing-subheading">
-          Choose the plan that fits your needs.
-        </p>
         <div className="pricing-cards">
           <div className="pricing-card">
             <h2>Basic</h2>

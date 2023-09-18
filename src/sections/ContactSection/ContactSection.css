@@ -41,6 +41,8 @@
 
 .contact-form,
 .contact-info {
+  margin-left: auto;
+  margin-right: auto;
   width: 45%;
 }
 
@@ -62,17 +64,6 @@
 
 .contact-button:hover {
   background-color: #c851ce;
-}
-
-/* Social Media Icons */
-.social-icons {
-  display: flex;
-  gap: 15px;
-}
-
-.social-icon {
-  color: #007bff;
-  text-decoration: none;
 }
 
 /* Responsive Design */
