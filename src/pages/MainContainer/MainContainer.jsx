@@ -1,14 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useArticleData } from "../../useArticleData";
 import QuestionInput from "../../components/QuestionInput/QuestionInput";
 import Article from "../../components/Article/Article";
 import Loader from "../../components/Loader/Loader";
 import YouTubeCarousel from "../../components/YouTubeCarousel/YouTubeCarousel.jsx";
 import { extractVideoIds } from "../../articleUtils";
-import Logout from "../../components/Logout/Logout.jsx";
 import "./MainContainer.css";
-import { Button } from "reactstrap";
+import Navbar from "../../sections/Navbar/Navbar";
+// import { Button } from "reactstrap";
 
 const App = () => {
   const {
@@ -21,9 +20,9 @@ const App = () => {
     handleEdit,
   } = useArticleData();
 
-  const goToArticles = () => {
-    window.location.href = "/articles";
-  };
+  // const goToArticles = () => {
+  //   window.location.href = "/articles";
+  // };
 
   return (
     <div>
@@ -41,15 +40,7 @@ const App = () => {
         </>
       ) : (
         <>
-          <nav className="nav-container">
-            <div className="logo">
-              <Link to="/">Articlo</Link>
-            </div>
-            <Button color="primary" size="lg" outline onClick={goToArticles}>
-              My Articles
-            </Button>
-            <Logout />
-          </nav>
+          <Navbar showNav={false} showLogout={true} />
           <QuestionInput onSubmit={handleSubmit} />
         </>
       )}

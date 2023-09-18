@@ -1,11 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; 
+
 import "./Logout.css";
 
 const Logout = () => {
+  const navigate = useNavigate(); 
+
   const handleLogout = () => {
     localStorage.removeItem("token");
-    window.location.href = "/";
-    console.log("Logout clicked");
+    navigate("/"); 
   };
 
   return (

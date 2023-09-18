@@ -1,19 +1,20 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { useNavigate } from "react-router-dom"; // Import useHistory
+import { useNavigate } from "react-router-dom"; 
+
+import Logout from "../../components/Logout/Logout";
+
 import "./Navbar.css";
 
 function Navbar({ showNav, showLogout }) {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate(); // Initialize history object
+  const navigate = useNavigate(); 
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   const navigateToHome = () => {
-    // Create navigateToHome function
-    navigate("/"); // Redirect to "/"
+    navigate("/"); 
   };
 
   return (
@@ -22,8 +23,7 @@ function Navbar({ showNav, showLogout }) {
         <nav className="navbar">
           <h1 className="logo" onClick={navigateToHome}>
             Artículo
-          </h1>{" "}
-          {/* Add onClick behavior */}
+          </h1>
           <div className="menu-toggle" onClick={toggleMenu}>
             <div className="bar"></div>
             <div className="bar"></div>
@@ -43,22 +43,15 @@ function Navbar({ showNav, showLogout }) {
               <li className="nav-item">
                 <a href="#contact-section">Contact</a>
               </li>
-              {showLogout && (
-                <li className="nav-item">
-                  <button className="logout-button">Logout</button>
-                </li>
-              )}
             </ul>
+          )}
+          {showLogout && !showNav && (
+            <Logout />
           )}
         </nav>
       </div>
     </section>
   );
 }
-
-Navbar.propTypes = {
-  showNav: PropTypes.bool.isRequired,
-  showLogout: PropTypes.bool,
-};
 
 export default Navbar;

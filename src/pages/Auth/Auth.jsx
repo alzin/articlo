@@ -1,8 +1,16 @@
 import React, { useState } from "react";
-import "./Auth.css"; // Import your CSS file here
+import { useNavigate } from "react-router-dom"; 
+import axios from "axios";
+
 import Navbar from "../../sections/Navbar/Navbar";
 
+import "./Auth.css"; 
+
+const SERVER_URL = process.env.REACT_APP_ARTICLO_SERVER_URL;
+
 function Auth() {
+  const navigate = useNavigate(); 
+
   const [activeTab, setActiveTab] = useState("login");
   const [loginData, setLoginData] = useState({
     email: "",
@@ -29,9 +37,20 @@ function Auth() {
     setSignupData({ ...signupData, [name]: value });
   };
 
-  const handleLoginSubmit = (e) => {
+  const handleLoginSubmit = async (e) => {
     e.preventDefault();
-    // Implement your login logic here
+    
+    try {
+      // Implement your login logic here
+      const response = await axios.post(`${SERVER_URL}/api/login`, loginData);
+      const { token } = response.data;
+      localStorage.setItem("token", token);
+      navigate("/home"); 
+    } catch (error) {
+      // Handle error
+      const errorMessage = error.response.data.message;
+      alert(errorMessage);
+    }
   };
 
   const handleSignupSubmit = (e) => {
@@ -56,7 +75,7 @@ function Auth() {
               className={`auth-tab ${activeTab === "signup" ? "active" : ""}`}
               onClick={() => handleTabChange("signup")}
             >
-              Signup
+              Sign up
             </button>
           </div>
           <div className="auth-form">
@@ -108,7 +127,7 @@ function Auth() {
                   value={signupData.confirmPassword}
                   onChange={handleSignupInputChange}
                 />
-                <button type="submit">Signup</button>
+                <button type="submit">Sign up</button>
               </form>
             )}
           </div>
