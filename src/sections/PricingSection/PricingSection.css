@@ -54,18 +54,19 @@
 }
 
 .pricing-button {
-  background-color: #df73e7;
-  color: white;
+  border-radius: 10px; 
+  border: 2px dashed #df73e7;
+  background-color: transparent;
+  color: black;
   padding: 12px 24px;
-  border-radius: 4px;
   font-size: 18px;
-  border: none;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .pricing-button:hover {
   background-color: #c851ce;
+  color: white;
 }
 
 @media (max-width: 768px) {

@@ -32,9 +32,6 @@ function Navbar({ showNav, showLogout }) {
           {showNav && (
             <ul className={`nav-list ${isOpen ? "active" : ""}`}>
               <li className="nav-item">
-                <a href="#home">Home</a>
-              </li>
-              <li className="nav-item">
                 <a href="#features-section">Features</a>
               </li>
               <li className="nav-item">
