@@ -1,14 +1,14 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
 import "./Logout.css";
 
 const Logout = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    navigate("/"); 
+    navigate("/");
   };
 
   return (

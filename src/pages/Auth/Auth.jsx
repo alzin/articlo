@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import Navbar from "../../sections/Navbar/Navbar";
 
-import "./Auth.css"; 
+import "./Auth.css";
 
 const SERVER_URL = process.env.REACT_APP_ARTICLO_SERVER_URL;
 
 function Auth() {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const [activeTab, setActiveTab] = useState("login");
   const [loginData, setLoginData] = useState({
@@ -39,13 +39,13 @@ function Auth() {
 
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
-    
+
     try {
       // Implement your login logic here
       const response = await axios.post(`${SERVER_URL}/api/login`, loginData);
       const { token } = response.data;
       localStorage.setItem("token", token);
-      navigate("/home"); 
+      navigate("/home");
     } catch (error) {
       // Handle error
       const errorMessage = error.response.data.message;

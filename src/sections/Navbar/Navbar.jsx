@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
 import Logout from "../../components/Logout/Logout";
 
@@ -7,14 +7,14 @@ import "./Navbar.css";
 
 function Navbar({ showNav, showLogout }) {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   const navigateToHome = () => {
-    navigate("/"); 
+    navigate("/");
   };
 
   return (
@@ -45,9 +45,7 @@ function Navbar({ showNav, showLogout }) {
               </li>
             </ul>
           )}
-          {showLogout && !showNav && (
-            <Logout />
-          )}
+          {showLogout && !showNav && <Logout />}
         </nav>
       </div>
     </section>
