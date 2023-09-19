@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-
 import "./QuestionInput.css";
-
 import { IoMdCreate } from "react-icons/io";
 
 const QuestionInput = (props) => {

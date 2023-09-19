@@ -19,7 +19,7 @@ function Auth() {
   const [signupData, setSignupData] = useState({
     username: "",
     email: "",
-    password: ""
+    password: "",
   });
 
   const handleTabChange = (tab) => {
@@ -55,12 +55,12 @@ function Auth() {
       const response = await axios.post(`${SERVER_URL}/api/signup`, signupData);
       const { token } = response.data;
       localStorage.setItem("token", token);
-      navigate("/home"); 
+      navigate("/home");
     } catch (error) {
       const errorMessage = error.response.data.message;
       alert(errorMessage);
+    }
   };
-}
 
   return (
     <div>
