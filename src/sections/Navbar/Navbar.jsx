@@ -24,11 +24,13 @@ function Navbar({ showNav, showLogout }) {
           <h1 className="logo" onClick={navigateToHome}>
             Artículo
           </h1>
-          <div className="menu-toggle" onClick={toggleMenu}>
-            <div className="bar"></div>
-            <div className="bar"></div>
-            <div className="bar"></div>
-          </div>
+          {showNav && (  // Conditionally show the menu toggle based on showNav
+            <div className="menu-toggle" onClick={toggleMenu}>
+              <div className="bar"></div>
+              <div className="bar"></div>
+              <div className="bar"></div>
+            </div>
+          )}
           {showNav && (
             <ul className={`nav-list ${isOpen ? "active" : ""}`}>
               <li className="nav-item">
