@@ -9,7 +9,7 @@ import ArticleSection from "./ArticleSection/ArticleSection";
 const Article = ({ title, image, body, sections, onEdit }) => {
   return (
     <div className="container">
-      <div className="card">
+      <div className="article-card">
         <ArticleTitle title={title} />
         <ArticleImage src={image} alt={title} />
         <Paragraph text={body} onEdit={onEdit} />

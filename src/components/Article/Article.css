@@ -1,16 +1,28 @@
 .container {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Changed to flex-start for better alignment with page content */
   justify-content: center;
-  margin-top: 100px;
+  padding: 2rem; /* Added padding to give some space */
+  background-color: #fafafa; /* Light background color */
 }
 
-.card {
+.article-card {
   border: 1px solid #ccc;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  padding: 1rem;
-  max-width: 800px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Softened the shadow a bit */
+  border-radius: 8px; /* Increased border-radius for a softer look */
+  padding: 2rem; /* Increased padding for a more spacious layout */
+  max-width: 1000px; /* Increased maximum width for more breathing room */
   width: 100%;
-  background-color: #f0f0f0;
+  background-color: #fff; /* Changed to white for a cleaner look */
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .article-card {
+    padding: 1rem;
+  }
 }

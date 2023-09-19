@@ -12,7 +12,7 @@ function Paragraph(props) {
     </p>
   ));
 
-  return <div>{formattedParagraphs}</div>;
+  return <div className="paragraph-container">{formattedParagraphs}</div>;
 }
 
 export default Paragraph;

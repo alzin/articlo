@@ -1,7 +1,23 @@
+/* A container to wrap all paragraphs */
+.paragraph-container {
+  margin: 0 auto;
+  max-width: 800px; /* You can adjust as needed */
+  padding: 0 1rem; /* Horizontal padding */
+}
+
 /* Style the article body */
 .article-body {
-  font-size: 1rem;
-  padding: 2px 20px;
-  line-height: 1.5;
-  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.2rem; /* Slightly increased for better readability */
+  padding: 0.5rem 0; /* Top and bottom padding */
+  line-height: 1.6; /* Increased line-height */
+  font-family: 'Georgia', 'Times New Roman', Times, serif; /* Adjusted font for better readability */
+  text-align: justify; /* Justified text */
+  word-wrap: break-word; /* Ensures no text overflow */
+}
+
+@media (max-width: 600px) {
+  .article-body {
+    font-size: 1rem; /* Smaller text for smaller screens */
+    line-height: 1.5; /* Adjusted line-height for smaller screens */
+  }
 }

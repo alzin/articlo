@@ -1,7 +1,17 @@
 .article-title {
   text-align: center;
-  border: 1px solid black;
-  width: 350px;
-  margin: 20px auto;
-  padding: 5px;
+  border-bottom: 2px solid black; /* Updated from all-around border to just a bottom border */
+  width: 90%; /* Making it responsive */
+  max-width: 800px; /* Maximum width */
+  margin: 20px auto; /* Centering */
+  padding: 20px; /* Increased padding */
+  font-size: 2rem; /* Increased font size */
+}
+
+@media (max-width: 600px) {
+  .article-title {
+    font-size: 1.5rem; /* Smaller font size for small screens */
+    padding: 15px;
+    margin: 15px auto;
+  }
 }

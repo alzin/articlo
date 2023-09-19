@@ -42,12 +42,14 @@ const YouTubeCarousel = ({ videoIds }) => {
         afterChange={handleSlideChange}
       >
         {videoIds.map((videoId) => (
-          <div key={videoId} className="react-player">
+          <div key={videoId} className="react-player-wrapper">
             <ReactPlayer
+              className="react-player"
               url={`https://www.youtube.com/watch?v=${videoId}`}
               volume={0.1}
               muted
-              width="44%"
+              width="100%"
+              height="100%"
               playing={videoId === activeVideoId}
             />
           </div>
