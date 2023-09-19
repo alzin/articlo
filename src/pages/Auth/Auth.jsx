@@ -17,10 +17,9 @@ function Auth() {
     password: "",
   });
   const [signupData, setSignupData] = useState({
-    fullName: "",
+    username: "",
     email: "",
-    password: "",
-    confirmPassword: "",
+    password: ""
   });
 
   const handleTabChange = (tab) => {
@@ -33,30 +32,35 @@ function Auth() {
   };
 
   const handleSignupInputChange = (e) => {
-    const { name, value } = e.target;
-    setSignupData({ ...signupData, [name]: value });
+    setSignupData({ ...signupData, [e.target.name]: e.target.value });
   };
 
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      // Implement your login logic here
       const response = await axios.post(`${SERVER_URL}/api/login`, loginData);
       const { token } = response.data;
       localStorage.setItem("token", token);
       navigate("/home");
     } catch (error) {
-      // Handle error
       const errorMessage = error.response.data.message;
       alert(errorMessage);
     }
   };
 
-  const handleSignupSubmit = (e) => {
+  const handleSignupSubmit = async (e) => {
     e.preventDefault();
-    // Implement your signup logic here
+    try {
+      const response = await axios.post(`${SERVER_URL}/api/signup`, signupData);
+      const { token } = response.data;
+      localStorage.setItem("token", token);
+      navigate("/home"); 
+    } catch (error) {
+      const errorMessage = error.response.data.message;
+      alert(errorMessage);
   };
+}
 
   return (
     <div>
@@ -101,9 +105,9 @@ function Auth() {
               <form onSubmit={handleSignupSubmit}>
                 <input
                   type="text"
-                  name="fullName"
+                  name="username"
                   placeholder="Full Name"
-                  value={signupData.fullName}
+                  value={signupData.username}
                   onChange={handleSignupInputChange}
                 />
                 <input
@@ -118,13 +122,6 @@ function Auth() {
                   name="password"
                   placeholder="Password"
                   value={signupData.password}
-                  onChange={handleSignupInputChange}
-                />
-                <input
-                  type="password"
-                  name="confirmPassword"
-                  placeholder="Confirm Password"
-                  value={signupData.confirmPassword}
                   onChange={handleSignupInputChange}
                 />
                 <button type="submit">Sign up</button>
