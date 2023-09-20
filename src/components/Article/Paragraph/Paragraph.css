@@ -10,7 +10,7 @@
   font-size: 1.2rem; /* Slightly increased for better readability */
   padding: 0.5rem 0; /* Top and bottom padding */
   line-height: 1.6; /* Increased line-height */
-  font-family: 'Georgia', 'Times New Roman', Times, serif; /* Adjusted font for better readability */
+  font-family: "Georgia", "Times New Roman", Times, serif; /* Adjusted font for better readability */
   text-align: justify; /* Justified text */
   word-wrap: break-word; /* Ensures no text overflow */
 }

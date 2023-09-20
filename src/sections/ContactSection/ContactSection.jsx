@@ -1,13 +1,23 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-
 import "./ContactSection.css";
 
 const ContactSection = () => {
   const form = useRef();
+  const [errorMessage, setErrorMessage] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
+    const formData = new FormData(form.current);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+
+    if (!name || !email || !message) {
+      setErrorMessage("All fields are required!");
+      return;
+    }
+
     emailjs
       .sendForm(
         "service_0orlrkc",
@@ -17,13 +27,14 @@ const ContactSection = () => {
       )
       .then(
         (result) => {
+          setErrorMessage("");
           alert("Email sent successfully!");
+          e.target.reset();
         },
         (error) => {
           alert("An error occurred while sending the email.");
         },
       );
-    e.target.reset();
   };
 
   return (
@@ -51,6 +62,9 @@ const ContactSection = () => {
                   placeholder="Message"
                   className="contact-textarea"
                 ></textarea>
+                {errorMessage && (
+                  <div className="error-message">{errorMessage}</div>
+                )}
                 <button type="submit" className="contact-button">
                   Send Message
                 </button>

@@ -1,29 +1,41 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import "./PricingSection.css";
 
 const PricingSection = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = (event) => {
+    navigate("/auth");
+  };
+
   return (
     <section id="pricing-section">
       <div className="pricing-container">
-        <h1 className="pricing-heading">Pricing</h1>
+        <h1 className="pricing-heading">Our Plans</h1>
         <div className="pricing-cards">
           <div className="pricing-card">
             <h2>Basic</h2>
-            <p>$10/month</p>
+            <p>FREE</p>
             <ul>
               <li>5 Articles</li>
               <li>Email Support</li>
             </ul>
-            <button className="pricing-button">Subscribe</button>
+            <button className="pricing-button" onClick={handleButtonClick}>
+              Access Now
+            </button>
           </div>
           <div className="pricing-card">
             <h2>Pro</h2>
-            <p>$30/month</p>
+            <p>FREE</p>
             <ul>
               <li>20 Articles</li>
               <li>Priority Support</li>
             </ul>
-            <button className="pricing-button">Subscribe</button>
+            <button className="pricing-button" onClick={handleButtonClick}>
+              Access Now
+            </button>
           </div>
           <div className="pricing-card">
             <h2>Enterprise</h2>
