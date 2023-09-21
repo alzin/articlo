@@ -26,7 +26,7 @@ const QuestionInput = (props) => {
       <input
         type="text"
         value={questionValue}
-        placeholder="Teaching robotics to kids"
+        placeholder="Enter a topic to generate an article..."
         onChange={handleChange}
         onKeyDown={handleKeyDown}
       />
