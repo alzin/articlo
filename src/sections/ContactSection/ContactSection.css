@@ -1,6 +1,8 @@
 /* Contact Section Styling */
 .contact-wrapper {
+  text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -9,6 +11,8 @@
 
 /* Updated Contact Section Styling */
 .contact-container {
+  flex-direction: column;
+  justify-content: center;
   width: 80%; /* Takes 80% of the wrapper width */
   max-width: 1200px; /* Doesn't get bigger than this */
   padding: 40px;
