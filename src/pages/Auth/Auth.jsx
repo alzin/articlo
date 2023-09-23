@@ -6,12 +6,14 @@ import Navbar from "../../sections/Navbar/Navbar";
 
 import "./Auth.css";
 
+import AuthImage from "../../images/auth.png";
+
 const SERVER_URL = process.env.REACT_APP_ARTICLO_SERVER_URL;
 
 function Auth() {
   const navigate = useNavigate();
 
-  const [activeTab, setActiveTab] = useState("login");
+  const [activeTab, setActiveTab] = useState("signup");
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
@@ -65,68 +67,67 @@ function Auth() {
   return (
     <div>
       <Navbar />
-
       <div className="auth-wrapper">
-        <div className="auth-container">
-          <div className="auth-tabs">
-            <button
-              className={`auth-tab ${activeTab === "login" ? "active" : ""}`}
-              onClick={() => handleTabChange("login")}
-            >
-              Login
-            </button>
-            <button
-              className={`auth-tab ${activeTab === "signup" ? "active" : ""}`}
-              onClick={() => handleTabChange("signup")}
-            >
-              Sign up
-            </button>
-          </div>
-          <div className="auth-form">
-            {activeTab === "login" ? (
-              <form onSubmit={handleLoginSubmit}>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  value={loginData.email}
-                  onChange={handleLoginInputChange}
-                />
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  value={loginData.password}
-                  onChange={handleLoginInputChange}
-                />
-                <button type="submit">Login</button>
-              </form>
-            ) : (
-              <form onSubmit={handleSignupSubmit}>
-                <input
-                  type="text"
-                  name="username"
-                  placeholder="Full Name"
-                  value={signupData.username}
-                  onChange={handleSignupInputChange}
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  value={signupData.email}
-                  onChange={handleSignupInputChange}
-                />
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  value={signupData.password}
-                  onChange={handleSignupInputChange}
-                />
-                <button type="submit">Sign up</button>
-              </form>
-            )}
+        <div className="auth-content">
+          <img src={AuthImage} alt="Auth" className="auth-image" />
+          <div className="auth-container">
+            <h2 className="auth-title">Get Started</h2>
+            <div className="auth-tabs">
+              <Tab
+                activeTab={activeTab}
+                onTabChange={handleTabChange}
+                tabs={[
+                  { id: "login", label: "Login" },
+                  { id: "signup", label: "Signup" },
+                ]}
+              />
+            </div>
+            <div className="auth-form">
+              {activeTab === "login" ? (
+                <form onSubmit={handleLoginSubmit}>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={loginData.email}
+                    onChange={handleLoginInputChange}
+                  />
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    value={loginData.password}
+                    onChange={handleLoginInputChange}
+                  />
+                  <button type="submit">Login</button>
+                </form>
+              ) : (
+                <form onSubmit={handleSignupSubmit}>
+                  <input
+                    type="text"
+                    name="username"
+                    placeholder="Full Name"
+                    value={signupData.username}
+                    onChange={handleSignupInputChange}
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={signupData.email}
+                    onChange={handleSignupInputChange}
+                  />
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    value={signupData.password}
+                    onChange={handleSignupInputChange}
+                  />
+                  <button type="submit">Sign up</button>
+                </form>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -135,3 +136,20 @@ function Auth() {
 }
 
 export default Auth;
+
+// A simple tab component
+function Tab({ activeTab, onTabChange, tabs }) {
+  return (
+    <div className="tab-container">
+      {tabs.map((tab) => (
+        <div
+          key={tab.id}
+          className={`tab ${activeTab === tab.id ? "active" : ""}`}
+          onClick={() => onTabChange(tab.id)}
+        >
+          {tab.label}
+        </div>
+      ))}
+    </div>
+  );
+}
