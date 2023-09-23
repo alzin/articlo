@@ -1,15 +1,10 @@
-.auth-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
 .auth-content {
+  height: 100vh;
+  padding: 20px 20px;
   display: flex;
   align-items: center; /* For vertical alignment */
   justify-content: center; /* For horizontal alignment */
-  width: 100%;
+  gap: 20px;
 }
 
 .auth-container {
@@ -55,7 +50,7 @@
 .auth-form button {
   width: 100%;
   padding: 10px;
-  background-color: #2A3B8D;
+  background-color: #2a3b8d;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -65,13 +60,13 @@
 }
 
 .auth-form button:hover {
-  background-color: #1A2B5D;
+  background-color: #1a2b5d;
 }
 
 .auth-image {
   width: 300px;
   height: 300px;
-  margin-right: 50px; 
+  margin-right: 50px;
 }
 
 .tab-container {
@@ -96,7 +91,7 @@
 }
 
 .tab.active {
-  border-bottom: 3px solid #EE136F; /* Gives a noticeable underline for the active tab */
+  border-bottom: 3px solid #ee136f; /* Gives a noticeable underline for the active tab */
   background-color: #fdfdfd;
 }
 
@@ -104,12 +99,13 @@
   font-size: 24px;
   margin-bottom: 20px;
   text-align: center;
-  color: #333;  /* You can adjust this color to fit your branding */
+  color: #333; /* You can adjust this color to fit your branding */
 }
 
 /* Media Query for smaller screens */
 @media only screen and (max-width: 768px) {
   .auth-content {
+    height: auto;
     flex-direction: column;
   }
 
@@ -120,6 +116,6 @@
   .auth-image {
     width: 200px;
     height: 200px;
-    margin-right: 0; 
+    margin-right: 0;
   }
 }
