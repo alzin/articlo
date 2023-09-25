@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate  } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
 import MainContainer from "./pages/MainContainer/MainContainer.jsx";
 import LandingPage from "./pages/LandingPage/LandingPage.jsx";
@@ -26,7 +31,6 @@ function AuthWrapper() {
 
   return <Auth />;
 }
-
 
 function App() {
   return (

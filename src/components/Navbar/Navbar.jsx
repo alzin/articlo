@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import Logout from "../Logout/Logout";
+
 import "./Navbar.css";
 
 function Navbar({ showNav, showLogout }) {
@@ -22,7 +24,7 @@ function Navbar({ showNav, showLogout }) {
           <h1 className="logo" onClick={navigateToHome}>
             Artículo
           </h1>
-          {showNav && (
+          {showNav && ( // Conditionally show the menu toggle based on showNav
             <div className="menu-toggle" onClick={toggleMenu}>
               <div className="bar"></div>
               <div className="bar"></div>
@@ -42,6 +44,7 @@ function Navbar({ showNav, showLogout }) {
               </li>
             </ul>
           )}
+          {showLogout && !showNav && <Logout />}
         </nav>
       </div>
     </section>

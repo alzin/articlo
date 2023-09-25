@@ -6,8 +6,7 @@ import Loader from "../../components/Loader/Loader";
 import YouTubeCarousel from "../../components/YouTubeCarousel/YouTubeCarousel.jsx";
 import { extractVideoIds } from "../../articleUtils";
 import "./MainContainer.css";
-import Navbar from "../../sections/Navbar/Navbar";
-// import { Button } from "reactstrap";
+import MainBar from "../../components/MainBar/MainBar";
 
 const App = () => {
   const {
@@ -19,10 +18,6 @@ const App = () => {
     handleSubmit,
     handleEdit,
   } = useArticleData();
-
-  // const goToArticles = () => {
-  //   window.location.href = "/articles";
-  // };
 
   return (
     <div>
@@ -40,7 +35,7 @@ const App = () => {
         </>
       ) : (
         <>
-          <Navbar showNav={false} showLogout={true} />
+          <MainBar />
           <QuestionInput onSubmit={handleSubmit} />
         </>
       )}
