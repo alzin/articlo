@@ -1,16 +1,13 @@
 .carousel-video {
   padding: 2rem;
-  box-sizing: border-box;
-  position: relative;
+  width: 78%;
+  margin: 0 auto;
 }
 
 .react-player-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  height: 0;
+  /* 16:9 Aspect Ratio */
+  padding-bottom: 56.25%; 
+  
 }
 
 .react-player {
@@ -29,6 +26,8 @@
 @media (max-width: 1024px) {
   .carousel-video {
     padding: 1.5rem;
+    width: 75%;
+    margin: 0 auto;
   }
 
   .react-multiple-carousel__arrow--left,
@@ -41,6 +40,8 @@
 @media (max-width: 464px) {
   .carousel-video {
     padding: 1rem;
+    width: 100%;
+    margin: 0;
   }
 
   .react-multiple-carousel__arrow--left,
