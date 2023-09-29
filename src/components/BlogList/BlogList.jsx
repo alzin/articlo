@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import BlogCard from "../BlogCard/BlogCard";
+import Article from "../Article/Article";
 
 import "./BlogList.css";
 
@@ -14,6 +15,7 @@ const getToken = () => {
 
 const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
+  const [selectedBlog, setSelectedBlog] = useState(null);
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -24,8 +26,6 @@ const BlogList = () => {
             Authorization: `Bearer ${getToken()}`,
           },
         });
-        console.log("response.data:", response.data);
-
         setBlogs(response.data);
       } catch (error) {
         console.error("Error fetching blogs:", error);
@@ -37,9 +37,33 @@ const BlogList = () => {
 
   return (
     <div className="blog-list">
-      {blogs.map((blog) => (
-        <BlogCard title={blog.title} image={blog.imageUrl} text={blog.body} />
-      ))}
+      {selectedBlog ? (
+        <div className="article-container">
+          <button
+            className="show-all-blogs-btn"
+            onClick={() => setSelectedBlog(null)}
+          >
+            Show All Blogs
+          </button>
+          <Article
+            title={selectedBlog.title}
+            image={selectedBlog.imageUrl}
+            body={selectedBlog.body}
+            sections=""
+            onEdit={() => null}
+          />
+        </div>
+      ) : (
+        blogs.map((blog, index) => (
+          <BlogCard
+            key={blog.id || index}
+            title={blog.title}
+            image={blog.imageUrl}
+            text={blog.body}
+            onClick={() => setSelectedBlog(blog)}
+          />
+        ))
+      )}
     </div>
   );
 };

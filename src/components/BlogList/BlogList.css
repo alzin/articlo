@@ -5,6 +5,27 @@
   gap: 50px;
 }
 
+.article-container {
+  position: relative; /* This will be the reference for absolute positioning of its children */
+}
+
+.show-all-blogs-btn {
+  position: relative; /* This will remove the button from the normal flow and position it according to the closest relative/absolute/fixed container */
+  margin: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 10; /* Ensure it's above other elements if needed */
+}
+
+.show-all-blogs-btn:hover {
+  background-color: #555;
+}
+
 @media (max-width: 768px) {
   .blog-list {
     grid-template-columns: 1fr;

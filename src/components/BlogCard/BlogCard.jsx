@@ -1,7 +1,7 @@
 import React from "react";
 import "./BlogCard.css";
 
-const BlogCard = ({ title, image, text }) => {
+const BlogCard = ({ title, image, text, onClick }) => {
   const truncateText = (text, maxLength) => {
     if (text.length > maxLength) {
       return text.substring(0, maxLength) + "...";
@@ -10,7 +10,7 @@ const BlogCard = ({ title, image, text }) => {
   };
 
   return (
-    <div className="blog-card">
+    <div className="blog-card" onClick={onClick}>
       <img src={image} alt={title} className="blog-card__image" />
       <div className="blog-card__content">
         <h2 className="blog-card__title">{title}</h2>
