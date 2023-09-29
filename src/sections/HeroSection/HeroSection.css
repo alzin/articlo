@@ -7,6 +7,7 @@
   background-color: #ffffff;
   color: black;
   padding: 60px;
+  min-height: 100vh;
 }
 
 /* Style the hero headline */
@@ -44,4 +45,12 @@
   max-width: 600px;
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-container {
+    min-height: 0vh;
+  }
 }

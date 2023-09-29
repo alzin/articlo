@@ -5,10 +5,9 @@ import Article from "../../components/Article/Article";
 import Loader from "../../components/Loader/Loader";
 import YouTubeCarousel from "../../components/YouTubeCarousel/YouTubeCarousel.jsx";
 import { extractVideoIds } from "../../articleUtils";
-import "./MainContainer.css";
 import MainBar from "../../components/MainBar/MainBar";
 
-const App = () => {
+const MainContainer = () => {
   const {
     articleTitle,
     articleImageUrl,
@@ -43,4 +42,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default MainContainer;
