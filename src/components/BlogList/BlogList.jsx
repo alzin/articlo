@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import BlogCard from "../BlogCard/BlogCard";
@@ -16,6 +17,7 @@ const getToken = () => {
 const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
   const [selectedBlog, setSelectedBlog] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -64,6 +66,12 @@ const BlogList = () => {
           />
         ))
       )}
+      <button
+        className="create-new-article-btn"
+        onClick={() => navigate("/home")}
+      >
+        Create New Article
+      </button>
     </div>
   );
 };

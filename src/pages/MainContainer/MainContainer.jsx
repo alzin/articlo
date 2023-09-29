@@ -22,7 +22,13 @@ const MainContainer = () => {
     <div>
       {isLoading && <Loader />}
       {articleTitle ? (
-        <>
+        <div>
+          <button
+            className="show-all-blogs-btn"
+            onClick={() => window.location.reload()}
+          >
+            Create New Article
+          </button>
           <Article
             title={articleTitle}
             image={articleImageUrl}
@@ -31,7 +37,7 @@ const MainContainer = () => {
             onEdit={handleEdit}
           />
           <YouTubeCarousel videoIds={extractVideoIds(articleYoutubeVideos)} />
-        </>
+        </div>
       ) : (
         <>
           <MainBar />
