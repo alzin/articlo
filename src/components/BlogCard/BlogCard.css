@@ -1,7 +1,7 @@
 .blog-card {
-  display: block; /* changed from flex to block for better control on different screens */
-  max-width:500px; /* Limit the maximum width on larger screens */
-  margin: 0 auto 20px; /* center the card on larger screens with auto margin */
+  display: block; 
+  max-width: 500px; 
+  margin: 0 auto 20px; 
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -14,7 +14,7 @@
 }
 
 .blog-card__image {
-  width: 100%; /* Ensure image takes the full width of the card */
+  width: 100%;
   height: 350px;
   object-fit: cover;
 }
@@ -24,27 +24,27 @@
 }
 
 .blog-card__title {
-  font-size: 18px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 8px;
 }
 
 .blog-card__text {
-  font-size: 16px; 
+  font-size: 20px;
   color: #555;
 }
 
 @media (max-width: 600px) {
   .blog-card__image {
-    height: 150px; /* Adjust image height on mobile screens */
+    height: 300px; 
   }
   .blog-card__text {
-    font-size: 14px;
+    font-size: 20px;
   }
   .blog-card__title {
-    font-size: 16px;
+    font-size: 30px;
   }
   .blog-card {
-    margin: 0 auto 10px; /* Reduce the margin-bottom for mobile screens */
+    margin: 0 auto 10px; 
   }
 }

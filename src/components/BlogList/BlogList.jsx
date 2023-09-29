@@ -18,16 +18,12 @@ const BlogList = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-
-        const response = await axios.get(
-          `${SERVER_URL}/api/articles`,
-          {
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${getToken()}`,
-            },
+        const response = await axios.get(`${SERVER_URL}/api/articles`, {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${getToken()}`,
           },
-        );
+        });
         console.log("response.data:", response.data);
 
         setBlogs(response.data);
@@ -42,11 +38,7 @@ const BlogList = () => {
   return (
     <div className="blog-list">
       {blogs.map((blog) => (
-        <BlogCard
-          title={blog.title}
-          image={blog.imageUrl}
-          text={blog.body}
-        />
+        <BlogCard title={blog.title} image={blog.imageUrl} text={blog.body} />
       ))}
     </div>
   );
