@@ -1,13 +1,12 @@
 .blog-card {
-  display: flex;
-  flex-direction: column;
+  display: block; /* changed from flex to block for better control on different screens */
+  max-width:500px; /* Limit the maximum width on larger screens */
+  margin: 0 auto 20px; /* center the card on larger screens with auto margin */
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
   overflow: hidden;
-  max-width: 100%; /* Adjusted for full width, if needed */
-  margin-bottom: 20px; /* Added some bottom margin */
 }
 
 .blog-card:hover {
@@ -15,9 +14,8 @@
 }
 
 .blog-card__image {
-  width: 100%;
-  height: auto; /* Adjusted to maintain aspect ratio */
-  max-height: 200px; /* Maximum height */
+  width: 100%; /* Ensure image takes the full width of the card */
+  height: 350px;
   object-fit: cover;
 }
 
@@ -32,15 +30,21 @@
 }
 
 .blog-card__text {
-  font-size: 16px; /* Increased for readability */
+  font-size: 16px; 
   color: #555;
 }
 
 @media (max-width: 600px) {
+  .blog-card__image {
+    height: 150px; /* Adjust image height on mobile screens */
+  }
   .blog-card__text {
-    font-size: 14px; /* Smaller text for smaller screens */
+    font-size: 14px;
   }
   .blog-card__title {
-    font-size: 16px; /* Smaller title for smaller screens */
+    font-size: 16px;
+  }
+  .blog-card {
+    margin: 0 auto 10px; /* Reduce the margin-bottom for mobile screens */
   }
 }
