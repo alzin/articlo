@@ -58,6 +58,7 @@ function Auth() {
       const { token } = response.data;
       localStorage.setItem("token", token);
       navigate("/home");
+      console.log(response, "hi respond");
     } catch (error) {
       const errorMessage = error.response.data.message;
       alert(errorMessage);
@@ -88,6 +89,7 @@ function Auth() {
                   type="email"
                   name="email"
                   placeholder="Email"
+                  autoComplete="email"
                   value={loginData.email}
                   onChange={handleLoginInputChange}
                 />
@@ -95,6 +97,7 @@ function Auth() {
                   type="password"
                   name="password"
                   placeholder="Password"
+                  autoComplete="current-password"
                   value={loginData.password}
                   onChange={handleLoginInputChange}
                 />
@@ -106,6 +109,7 @@ function Auth() {
                   type="text"
                   name="username"
                   placeholder="Full Name"
+                  autoComplete="username"
                   value={signupData.username}
                   onChange={handleSignupInputChange}
                 />
@@ -113,6 +117,7 @@ function Auth() {
                   type="email"
                   name="email"
                   placeholder="Email"
+                  autoComplete="email"
                   value={signupData.email}
                   onChange={handleSignupInputChange}
                 />
@@ -120,6 +125,7 @@ function Auth() {
                   type="password"
                   name="password"
                   placeholder="Password"
+                  autoComplete="current-password"
                   value={signupData.password}
                   onChange={handleSignupInputChange}
                 />

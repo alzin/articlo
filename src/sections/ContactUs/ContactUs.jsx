@@ -15,7 +15,7 @@ const ContactUs = () => {
         "service_0orlrkc",
         "template_fabncd4",
         form.current,
-        "mqYufy-Epq6lV-Wdk",
+        "mqYufy-Epq6lV-Wdk"
       )
       .then(
         (result) => {
@@ -25,7 +25,7 @@ const ContactUs = () => {
         (error) => {
           console.log(error.text);
           alert("An error occurred while sending the email.");
-        },
+        }
       );
     e.target.reset();
   };
@@ -42,7 +42,7 @@ const ContactUs = () => {
             <input type="email" name="email" placeholder="Email" />
             <textarea name="message" placeholder="Message"></textarea>
             <Button color="success" size="lg" outline type="submit">
-              Send Message
+              Send Message 2
             </Button>
           </form>
         </div>
